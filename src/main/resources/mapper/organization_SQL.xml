@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD MApper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ziumks.organization.mapper.OrganizationMapper">
+	
+	<select id="selectOrganizationList" parameterType="com.ziumks.organization.model.Organization"
+		resultType="com.ziumks.organization.model.Organization">
+	
+		SELECT id, name FROM test_mysql
+	</select>
+	
+	<select id="selectOrganizationListCnt" parameterType="com.ziumks.organization.model.Organization"
+		resultType="INT">
+	
+		SELECT COUNT(*) AS TOTCNT FROM test_mysql
+	</select>
+</mapper>
